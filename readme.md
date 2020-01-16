@@ -7,7 +7,7 @@
 - 098 - Krabby
 
 
-## Part.1 : Salutations
+## Part.1 : Salutations from Kanto
 
 - let
 - String
@@ -16,7 +16,13 @@
 
 ## Part.2 : Create some basic Pokemon
 
-- let
-- String
-- mut
+- Create a Pikachu
+- Struct with id, name
+- Println
 
+## Part.3 : Create a function
+
+- Create a Salameche
+- Create a show method
+- Println
+- Borrow checker
