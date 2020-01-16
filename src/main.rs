@@ -3,6 +3,8 @@ pub mod core;
 use crate::core::pokeball::*;
 use crate::core::pokemon::*;
 
+use rand::prelude::*;
+
 fn main() {
     //PART 1 : Salutations
     println!("--------------------------------------------");
@@ -61,6 +63,8 @@ fn main() {
         Ok(pokemon) => pokemon.who_am_i(),
         Err(error_message) => println!("{}", error_message),
     }
+
+    println!("{}", get_a_random_number(15))
 }
 
 fn appears(pokemon: &Pokemon) {
@@ -76,4 +80,9 @@ trait CanBeNammed {
     fn who_am_i(&self) {
         println!("Je suis un(e) {}", self.get_my_name());
     }
+}
+
+fn get_a_random_number(max: u32) -> u32 {
+    let mut rng = rand::thread_rng();
+    rng.gen_range(1, max)
 }
