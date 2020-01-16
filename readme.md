@@ -25,14 +25,14 @@
 - Create a Salameche
 - Create a **Appears** method
 - Println
-- Borrow checker
+- Borrow checker => &
 
 
 ## Part.4 : Cleaning project
 
 - Create **Core** folder
 - Create a **pokemon** file
-- Change the visibility of attributes
+- Change the visibility of Pokemon attributes
 
 ## Part.5 : Create Poketype and a constructor
 
@@ -45,11 +45,17 @@
     - Create a **new** constructor
 
 
-## Part.6 : Traits CanBeNammed show 
+## Part.7 : Traits CanBeNammed, #[derive(Debug)]
 
-## Part.7 : Traits CanBeNammed show 
-
-- Create a **CanBeNammed** trait
+- Create a **CanBeNammed** trait with func:
+    - **get_my_name**
+    - **who_am_i**
 - Impl for **Pokemon** and **Poketype**
-- Println
-- Borrow checker
+
+## Part.7 : Auto traits Debug and Generic
+
+- Add implicit trait **#[derive(Debug)]** for **Pokemon** and **Poketype**
+- Create a *show* method with sign :
+    - ```fn show<T: CanBeNammed + std::fmt::Debug>(struct_to_show: &T)``` 
+
+## Part.8 :  Create Pokeball and Option
