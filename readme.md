@@ -27,13 +27,14 @@
 - Println
 - Borrow checker
 
-## Part.4 : Create Poketype
+## Part.4 : Create Poketype and a constructor
 
 - Create a **Poketype** struct with name
-- Create a Vec<Poketype> attributes
+- Create a Vec<Poketype> attributes in **Pokemon**
+- Create a **add_type** method in **Pokemon**
+- Create a **add_types** method in **Pokemon**
+- Create a constructor in **Pokemon**
 
-
-- Create Pokemon constructor (new)
 
 ## Part.5 : Create new and Traits show and CanBeNammed
 
