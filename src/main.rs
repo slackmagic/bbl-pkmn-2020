@@ -49,6 +49,18 @@ fn main() {
     let pokeball = Pokeball::new("pokeball".to_string(), Some(bulbizarre));
     show(&pokeball);
     pokeball.who_am_i();
+    match pokeball.get_pokemon() {
+        Ok(pokemon) => pokemon.who_am_i(),
+        Err(error_message) => println!("{}", error_message),
+    }
+
+    let masterball = Pokeball::new("masterball".to_string(), None);
+    show(&masterball);
+    masterball.who_am_i();
+    match masterball.get_pokemon() {
+        Ok(pokemon) => pokemon.who_am_i(),
+        Err(error_message) => println!("{}", error_message),
+    }
 }
 
 fn appears(pokemon: &Pokemon) {

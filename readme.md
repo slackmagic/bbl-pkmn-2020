@@ -61,25 +61,36 @@
 ## Part.8 :  Create Pokeball and Option
 
 - Create a **Pokeball** with 
-```#[derive(Debug)]
+```
+#[derive(Debug)]
 pub struct Pokeball<'a> {
     name: String,
-    pokemon: Option<&'a Pokemon>,
+    pokemon: &'a Pokemon,
 }
 
 impl<'a> Pokeball<'a> {
-    pub fn new(name: String, pokemon: Option<&'a Pokemon>) -> Pokeball {
+    pub fn new(name: String, pokemon: &'a Pokemon) -> Pokeball {
         Pokeball { name, pokemon }
     }
 }
 
 impl<'a> CanBeNammed for Pokeball<'a> {
     fn get_my_name(&self) -> String {
-        match &self.pokemon {
-            Some(pokemon) => {
-                format!("{} et je contiens un {:#?}", &self.name, &pokemon.name).to_string()
-            }
-            None => format!("{} et je suis vide", &self.name),
-        }
+        format!("{} et je contiens un {:#?}", &self.name, &self.pokemon.name).to_string()
     }
-} ```
+}
+```
+- Add an optional **Pokemon** attributes to **Pokeball**
+- Update **get_my_name**
+- Add **get_pokemon()** func to **Pokeball** with Result<>
+- Add a masterball
+
+```
+    let pokeball = Pokeball::new("pokeball".to_string(), Some(bulbizarre));
+    show(&pokeball);
+    pokeball.who_am_i();
+    match pokeball.get_pokemon() {
+        Ok(pokemon) => pokemon.who_am_i(),
+        Err(error_message) => println!("{}", error_message),
+    }
+```
