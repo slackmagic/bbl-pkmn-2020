@@ -27,17 +27,29 @@
 - Println
 - Borrow checker
 
-## Part.4 : Create Poketype and a constructor
+
+## Part.4 : Cleaning project
+
+- Create **Core** folder
+- Create a **pokemon** file
+- Change the visibility of attributes
+
+## Part.5 : Create Poketype and a constructor
 
 - Create a **Poketype** struct with name
-- Create a Vec<Poketype> attributes in **Pokemon**
-- Create a **add_type** method in **Pokemon**
-- Create a **add_types** method in **Pokemon**
-- Create a constructor in **Pokemon**
+- Create 
+- Update **Pokemon** :
+    - Add a Vec<Poketype> attributes
+    - Create function **add_type**
+    - Create function **add_type**
+    - Create a **new** constructor
 
 
-## Part.5 : Create new and Traits show and CanBeNammed
+## Part.6 : Traits CanBeNammed show 
 
+## Part.7 : Traits CanBeNammed show 
 
+- Create a **CanBeNammed** trait
+- Impl for **Pokemon** and **Poketype**
 - Println
 - Borrow checker
