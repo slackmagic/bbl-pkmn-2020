@@ -17,12 +17,26 @@
 ## Part.2 : Create some basic Pokemon
 
 - Create a Pikachu
-- Struct with id, name
+- Create a **Pokemon** struct with id, name
 - Println
 
 ## Part.3 : Create a function
 
 - Create a Salameche
-- Create a show method
+- Create a **Appears** method
+- Println
+- Borrow checker
+
+## Part.4 : Create Poketype
+
+- Create a **Poketype** struct with name
+- Create a Vec<Poketype> attributes
+
+
+- Create Pokemon constructor (new)
+
+## Part.5 : Create new and Traits show and CanBeNammed
+
+
 - Println
 - Borrow checker
