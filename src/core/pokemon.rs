@@ -34,7 +34,7 @@ impl Pokemon {
 }
 
 impl CanBeNammed for Pokemon {
-    fn get_my_name(&self) -> &String {
-        &self.name
+    fn get_my_name(&self) -> String {
+        self.name.to_string()
     }
 }

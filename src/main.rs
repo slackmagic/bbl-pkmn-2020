@@ -1,5 +1,6 @@
 pub mod core;
 
+use crate::core::pokeball::*;
 use crate::core::pokemon::*;
 
 fn main() {
@@ -45,15 +46,13 @@ fn main() {
 
     //PART 5 : Cleaning & Pokeball
     println!("--------------------------------------------");
+    let pokeball = Pokeball::new("pokeball".to_string(), Some(bulbizarre));
+    show(&pokeball);
+    pokeball.who_am_i();
 }
 
 fn appears(pokemon: &Pokemon) {
     println!("Un {} sauvage apparaît", pokemon.name);
-}
-
-struct Pokeball {
-    name: String,
-    pokemon: Pokemon,
 }
 
 fn show<T: CanBeNammed + std::fmt::Debug>(struct_to_show: &T) {
@@ -61,7 +60,7 @@ fn show<T: CanBeNammed + std::fmt::Debug>(struct_to_show: &T) {
 }
 
 trait CanBeNammed {
-    fn get_my_name(&self) -> &String;
+    fn get_my_name(&self) -> String;
     fn who_am_i(&self) {
         println!("Je suis un(e) {}", self.get_my_name());
     }
